@@ -5,8 +5,12 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
-    book.save
-    redirect_to book_path(book.id)
+    if book.save
+       redirect_to book_path(book.id)
+    else
+      @book = Book.new
+      render :new
+    end
   end
 
 
@@ -28,7 +32,11 @@ class BooksController < ApplicationController
     redirect_to book_path(book.id)
   end
 
-  #destroyのアクション記述
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to new_book_path
+  end
 
   private
   def book_params
