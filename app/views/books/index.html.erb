@@ -1,2 +1,13 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <h5>Title</h5>
+  <span><%= book.title %></span>
+
+  <h5>Body</h5>
+  <span><%= book.body %></span>
+
+  <p><%= link_to 'Show', book_path(book[:id]) %></p>
+  <p><%= link_to 'Edit', edit_book_path(book[:id]) %></p>
+  <P><% #destroyアクションのリンクと確認メッセージ表示 %></P>
+<% end %>

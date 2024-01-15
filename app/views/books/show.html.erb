@@ -3,4 +3,10 @@
 
 <h5>Body:</h5><%= @book.body %>
 
-<% #editへのリンクとnewへのリンクを貼る　%>
+
+<p>
+  <%= link_to 'Edit', edit_book_path(@book.id) %>
+</p>
+<p>
+  <%= link_to 'Back', new_book_path(@book) %>
+</p>
