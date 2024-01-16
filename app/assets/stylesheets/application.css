@@ -13,6 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+h1, h2, h3, h5 {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
 
 .flash-message {
   color: green;
@@ -22,6 +35,10 @@ h1 {
   margin: 30px 0px 15px 30px;
 }
 
+h2 {
+  margin: 15px 30px;
+}
+
 h3 {
   margin: 40px 50px;
   display: flex;
@@ -29,6 +46,25 @@ h3 {
 
 h3 > div {
  margin: 0px 5px;
+}
+
+h5 {
+  margin: 0px 0px 10px 30px;
+}
+
+table {
+  width: 100%;
+  margin: 0 30px;
+}
+.book-title {
+  width: 30%;
+}
+.book-body {
+  width: 45%;
+}
+
+td {
+  padding: 5px 2px;
 }
 
 span {
@@ -44,4 +80,41 @@ span {
   margin-left: 5px;
 }
 
+.edit-submit {
+  margin: 0px 0px 10px 30px;
+}
 
+.edit-link1 {
+  margin-left: 30px;
+  padding-right: 5px;
+  border-right: solid 2px black;
+}
+.edit-link2 {
+  margin-left: 5px;
+}
+
+.index-submit {
+  margin-left: 30px;
+}
+
+
+
+section {
+  width: 500px;
+  border: 2px solid red;
+  margin-left: 30px;
+  background-color: #f0f0f0;
+}
+.error-message {
+  width: 100%;
+  background-color: #c00;
+  font-weight: bold;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: square;
+  margin: 30px 70px;
+}

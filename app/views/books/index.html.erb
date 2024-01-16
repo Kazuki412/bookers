@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th class="book-title">Title</th>
+      <th class="book-body">Body</th>
     </tr>
   </thead>
   <tbody>
@@ -22,22 +22,30 @@
   </tbody>
 </table>
 
-<h3>New book</h3>
+<h2>New book</h2>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %> error prohibited this book from being saved:
+<section>
+  <div class="error-message">
+  <% if @book.errors.count ==1 %>
+    　<%= @book.errors.count %> error prohibited this book from being saved:
+   <% else %>
+     　<%= @book.errors.count %> errors prphibited this book from being saved:
+  <% end %>
+  </div>
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
+</section>
 <% end %>
 
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
-  <h5>Title</h5>
-  <%= f.text_field :title %>
-
-  <h5>Body</h5>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Create Book' %>
+  <h5>Title
+    <div><%= f.text_field :title %></div>
+  </h5>
+  <h5>Body
+    <div><%= f.text_area :body %></div>
+  </h5>
+  <div class="index-submit"><%= f.submit 'Create Book' %></div>
 <% end %>
