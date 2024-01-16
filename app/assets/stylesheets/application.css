@@ -27,6 +27,16 @@ h1, h2, h3, h5 {
   font-family: verdana, arial, helvetica, sans-serif;
 }
 
+strong {
+  margin: 0px 5px;
+}
+.top-message {
+  margin: 30px 50px;
+}
+.top-link {
+  margin: 10px 50px;
+}
+
 .flash-message {
   color: green;
   margin: 40px 50px;
