@@ -1,12 +1,11 @@
-<% # フラッシュメッセージ %>
-<h5>Title:</h5><%= @book.title %>
+<h3>Title:
+  <div><%= @book.title %></div>
+</h3>
+<h3>Body:
+  <div><%= @book.body %></div>
+</h3>
 
-<h5>Body:</h5><%= @book.body %>
-
-
-<p>
-  <%= link_to 'Edit', edit_book_path(@book.id) %>
-</p>
-<p>
-  <%= link_to 'Back', new_book_path(@book) %>
-</p>
+<span>
+   <p class="show-link1"><%= link_to 'Edit', edit_book_path(@book.id) %></p>
+   <p class="show-link2"><%= link_to 'Back', books_path %></p>
+</span>
